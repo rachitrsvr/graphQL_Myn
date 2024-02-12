@@ -1,0 +1,140 @@
+2023-10-27 13:36:05.605 +05:30 [DBG] Hosting starting
+2023-10-27 13:36:08.627 +05:30 [INF] Now listening on: https://localhost:7169
+2023-10-27 13:36:08.632 +05:30 [INF] Now listening on: http://localhost:5051
+2023-10-27 13:36:08.635 +05:30 [DBG] Loaded hosting startup assembly GraphQL.Demo.Api
+2023-10-27 13:36:08.637 +05:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-10-27 13:36:08.640 +05:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-10-27 13:36:08.642 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-10-27 13:36:08.644 +05:30 [INF] Hosting environment: Development
+2023-10-27 13:36:08.646 +05:30 [INF] Content root path: H:\Projects\UserDemoGraphQL\GraphQL.Demo.Api
+2023-10-27 13:36:08.647 +05:30 [DBG] Hosting started
+2023-10-27 13:36:08.784 +05:30 [DBG] Connection id "0HMUMOE9R0RE9" received FIN.
+2023-10-27 13:36:08.784 +05:30 [DBG] Connection id "0HMUMOE9R0RE8" received FIN.
+2023-10-27 13:36:08.786 +05:30 [DBG] Connection id "0HMUMOE9R0RE9" accepted.
+2023-10-27 13:36:08.786 +05:30 [DBG] Connection id "0HMUMOE9R0RE8" accepted.
+2023-10-27 13:36:08.794 +05:30 [DBG] Connection id "0HMUMOE9R0RE9" started.
+2023-10-27 13:36:08.796 +05:30 [DBG] Connection id "0HMUMOE9R0RE8" started.
+2023-10-27 13:36:10.065 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-10-27 13:36:10.065 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-10-27 13:36:10.319 +05:30 [DBG] Connection id "0HMUMOE9R0RE8" stopped.
+2023-10-27 13:36:10.325 +05:30 [DBG] Connection id "0HMUMOE9R0RE9" stopped.
+2023-10-27 13:36:10.349 +05:30 [DBG] Connection id "0HMUMOE9R0RE8" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-10-27 13:36:10.349 +05:30 [DBG] Connection id "0HMUMOE9R0RE9" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-10-27 13:36:10.940 +05:30 [DBG] Connection id "0HMUMOE9R0REA" accepted.
+2023-10-27 13:36:10.976 +05:30 [DBG] Connection id "0HMUMOE9R0REA" started.
+2023-10-27 13:36:11.491 +05:30 [DBG] Connection 0HMUMOE9R0REA established using the following protocol: "Tls12"
+2023-10-27 13:36:12.325 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/ - -
+2023-10-27 13:36:12.863 +05:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-10-27 13:36:13.337 +05:30 [DBG] 1 candidate(s) found for the request path '/'
+2023-10-27 13:36:13.346 +05:30 [DBG] Request matched endpoint 'HTTP: GET /'
+2023-10-27 13:36:13.377 +05:30 [INF] Executing endpoint 'HTTP: GET /'
+2023-10-27 13:36:13.387 +05:30 [INF] Executed endpoint 'HTTP: GET /'
+2023-10-27 13:36:13.431 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/ - - - 200 - text/plain;+charset=utf-8 1116.8594ms
+2023-10-27 13:36:23.121 +05:30 [DBG] Connection id "0HMUMOE9R0REA" received FIN.
+2023-10-27 13:36:23.144 +05:30 [DBG] The connection queue processing loop for 0HMUMOE9R0REA completed.
+2023-10-27 13:36:23.150 +05:30 [DBG] Connection id "0HMUMOE9R0REA" is closed. The last processed stream ID was 1.
+2023-10-27 13:36:23.155 +05:30 [DBG] Connection id "0HMUMOE9R0REA" sending FIN because: "The client closed the connection."
+2023-10-27 13:36:23.164 +05:30 [DBG] Connection id "0HMUMOE9R0REA" stopped.
+2023-10-27 13:36:49.486 +05:30 [DBG] Connection id "0HMUMOE9R0REB" accepted.
+2023-10-27 13:36:49.499 +05:30 [DBG] Connection id "0HMUMOE9R0REB" started.
+2023-10-27 13:36:49.505 +05:30 [DBG] Connection 0HMUMOE9R0REB established using the following protocol: "Tls12"
+2023-10-27 13:36:49.519 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/graphql - -
+2023-10-27 13:36:49.526 +05:30 [DBG] 1 candidate(s) found for the request path '/graphql'
+2023-10-27 13:36:49.593 +05:30 [DBG] Endpoint 'Hot Chocolate GraphQL Pipeline' with route pattern '/graphql/{**slug}' is valid for the request path '/graphql'
+2023-10-27 13:36:49.597 +05:30 [DBG] Request matched endpoint 'Hot Chocolate GraphQL Pipeline'
+2023-10-27 13:36:49.601 +05:30 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2023-10-27 13:36:50.257 +05:30 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2023-10-27 13:36:50.260 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/graphql - - - 301 0 - 742.1746ms
+2023-10-27 13:36:53.180 +05:30 [DBG] Connection id "0HMUMOE9R0REB" received FIN.
+2023-10-27 13:36:53.190 +05:30 [DBG] Connection id "0HMUMOE9R0REB" is closed. The last processed stream ID was 1.
+2023-10-27 13:36:53.190 +05:30 [DBG] Connection id "0HMUMOE9R0REB" sending FIN because: "The client closed the connection."
+2023-10-27 13:36:53.197 +05:30 [DBG] The connection queue processing loop for 0HMUMOE9R0REB completed.
+2023-10-27 13:36:53.201 +05:30 [DBG] Connection id "0HMUMOE9R0REB" stopped.
+2023-10-27 13:36:53.647 +05:30 [DBG] Connection id "0HMUMOE9R0REC" accepted.
+2023-10-27 13:36:53.662 +05:30 [DBG] Connection id "0HMUMOE9R0REC" started.
+2023-10-27 13:36:53.668 +05:30 [DBG] Connection 0HMUMOE9R0REC established using the following protocol: "Tls12"
+2023-10-27 13:36:53.682 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/graphql/bcp-config.json - -
+2023-10-27 13:36:53.683 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7169/graphql/service-worker.js - -
+2023-10-27 13:36:53.686 +05:30 [DBG] 1 candidate(s) found for the request path '/graphql/bcp-config.json'
+2023-10-27 13:36:53.692 +05:30 [DBG] 1 candidate(s) found for the request path '/graphql/service-worker.js'
+2023-10-27 13:36:53.695 +05:30 [DBG] Endpoint 'Hot Chocolate GraphQL Pipeline' with route pattern '/graphql/{**slug}' is valid for the request path '/graphql/bcp-config.json'
+2023-10-27 13:36:53.697 +05:30 [DBG] Endpoint 'Hot Chocolate GraphQL Pipeline' with route pattern '/graphql/{**slug}' is valid for the request path '/graphql/service-worker.js'
+2023-10-27 13:36:53.709 +05:30 [DBG] Request matched endpoint 'Hot Chocolate GraphQL Pipeline'
+2023-10-27 13:36:53.700 +05:30 [DBG] Request matched endpoint 'Hot Chocolate GraphQL Pipeline'
+2023-10-27 13:36:53.732 +05:30 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2023-10-27 13:36:53.732 +05:30 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2023-10-27 13:36:54.612 +05:30 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2023-10-27 13:36:54.615 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/graphql/bcp-config.json - - - 200 47 application/json;+charset=utf-8 933.0056ms
+2023-10-27 13:36:56.325 +05:30 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2023-10-27 13:36:56.333 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7169/graphql/service-worker.js - - - 304 - - 2649.8992ms
+2023-10-27 13:36:58.352 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7169/graphql application/json 158
+2023-10-27 13:36:58.360 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7169/graphql application/json 161
+2023-10-27 13:36:58.362 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7169/graphql application/json 152
+2023-10-27 13:36:58.362 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7169/graphql application/json 156
+2023-10-27 13:36:58.367 +05:30 [DBG] 1 candidate(s) found for the request path '/graphql'
+2023-10-27 13:36:58.369 +05:30 [DBG] 1 candidate(s) found for the request path '/graphql'
+2023-10-27 13:36:58.376 +05:30 [DBG] 1 candidate(s) found for the request path '/graphql'
+2023-10-27 13:36:58.383 +05:30 [DBG] 1 candidate(s) found for the request path '/graphql'
+2023-10-27 13:36:58.385 +05:30 [DBG] Endpoint 'Hot Chocolate GraphQL Pipeline' with route pattern '/graphql/{**slug}' is valid for the request path '/graphql'
+2023-10-27 13:36:58.388 +05:30 [DBG] Endpoint 'Hot Chocolate GraphQL Pipeline' with route pattern '/graphql/{**slug}' is valid for the request path '/graphql'
+2023-10-27 13:36:58.394 +05:30 [DBG] Endpoint 'Hot Chocolate GraphQL Pipeline' with route pattern '/graphql/{**slug}' is valid for the request path '/graphql'
+2023-10-27 13:36:58.397 +05:30 [DBG] Endpoint 'Hot Chocolate GraphQL Pipeline' with route pattern '/graphql/{**slug}' is valid for the request path '/graphql'
+2023-10-27 13:36:58.400 +05:30 [DBG] Request matched endpoint 'Hot Chocolate GraphQL Pipeline'
+2023-10-27 13:36:58.404 +05:30 [DBG] Request matched endpoint 'Hot Chocolate GraphQL Pipeline'
+2023-10-27 13:36:58.409 +05:30 [DBG] Request matched endpoint 'Hot Chocolate GraphQL Pipeline'
+2023-10-27 13:36:58.413 +05:30 [DBG] Request matched endpoint 'Hot Chocolate GraphQL Pipeline'
+2023-10-27 13:36:58.458 +05:30 [DBG] The request has an origin header: 'https://localhost:7169'.
+2023-10-27 13:36:58.458 +05:30 [DBG] The request has an origin header: 'https://localhost:7169'.
+2023-10-27 13:36:58.458 +05:30 [DBG] The request has an origin header: 'https://localhost:7169'.
+2023-10-27 13:36:58.458 +05:30 [DBG] The request has an origin header: 'https://localhost:7169'.
+2023-10-27 13:36:58.461 +05:30 [INF] CORS policy execution successful.
+2023-10-27 13:36:58.463 +05:30 [INF] CORS policy execution successful.
+2023-10-27 13:36:58.465 +05:30 [INF] CORS policy execution successful.
+2023-10-27 13:36:58.467 +05:30 [INF] CORS policy execution successful.
+2023-10-27 13:36:58.487 +05:30 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2023-10-27 13:36:58.487 +05:30 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2023-10-27 13:36:58.487 +05:30 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2023-10-27 13:36:58.487 +05:30 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2023-10-27 13:37:02.150 +05:30 [DBG] Connection id "0HMUMOE9R0REC", Request id "0HMUMOE9R0REC:0000000B": started reading request body.
+2023-10-27 13:37:02.150 +05:30 [DBG] Connection id "0HMUMOE9R0REC", Request id "0HMUMOE9R0REC:00000005": started reading request body.
+2023-10-27 13:37:02.150 +05:30 [DBG] Connection id "0HMUMOE9R0REC", Request id "0HMUMOE9R0REC:00000009": started reading request body.
+2023-10-27 13:37:02.150 +05:30 [DBG] Connection id "0HMUMOE9R0REC", Request id "0HMUMOE9R0REC:00000007": started reading request body.
+2023-10-27 13:37:02.153 +05:30 [DBG] Connection id "0HMUMOE9R0REC", Request id "0HMUMOE9R0REC:0000000B": done reading request body.
+2023-10-27 13:37:02.157 +05:30 [DBG] Connection id "0HMUMOE9R0REC", Request id "0HMUMOE9R0REC:00000005": done reading request body.
+2023-10-27 13:37:02.160 +05:30 [DBG] Connection id "0HMUMOE9R0REC", Request id "0HMUMOE9R0REC:00000009": done reading request body.
+2023-10-27 13:37:02.164 +05:30 [DBG] Connection id "0HMUMOE9R0REC", Request id "0HMUMOE9R0REC:00000007": done reading request body.
+2023-10-27 13:37:02.852 +05:30 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2023-10-27 13:37:02.852 +05:30 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2023-10-27 13:37:02.852 +05:30 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2023-10-27 13:37:02.852 +05:30 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2023-10-27 13:37:02.857 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7169/graphql application/json 161 - 200 - application/graphql-response+json;+charset=utf-8 4496.1869ms
+2023-10-27 13:37:02.860 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7169/graphql application/json 156 - 200 - application/graphql-response+json;+charset=utf-8 4497.9121ms
+2023-10-27 13:37:02.864 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7169/graphql application/json 152 - 200 - application/graphql-response+json;+charset=utf-8 4502.4113ms
+2023-10-27 13:37:02.866 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7169/graphql application/json 158 - 200 - application/graphql-response+json;+charset=utf-8 4514.2504ms
+2023-10-27 13:37:02.912 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7169/graphql application/json 1439
+2023-10-27 13:37:02.914 +05:30 [DBG] 1 candidate(s) found for the request path '/graphql'
+2023-10-27 13:37:02.916 +05:30 [DBG] Endpoint 'Hot Chocolate GraphQL Pipeline' with route pattern '/graphql/{**slug}' is valid for the request path '/graphql'
+2023-10-27 13:37:02.919 +05:30 [DBG] Request matched endpoint 'Hot Chocolate GraphQL Pipeline'
+2023-10-27 13:37:02.921 +05:30 [DBG] The request has an origin header: 'https://localhost:7169'.
+2023-10-27 13:37:02.926 +05:30 [INF] CORS policy execution successful.
+2023-10-27 13:37:02.929 +05:30 [INF] Executing endpoint 'Hot Chocolate GraphQL Pipeline'
+2023-10-27 13:37:02.935 +05:30 [DBG] Connection id "0HMUMOE9R0REC", Request id "0HMUMOE9R0REC:0000000D": started reading request body.
+2023-10-27 13:37:02.937 +05:30 [DBG] Connection id "0HMUMOE9R0REC", Request id "0HMUMOE9R0REC:0000000D": done reading request body.
+2023-10-27 13:37:03.065 +05:30 [INF] Executed endpoint 'Hot Chocolate GraphQL Pipeline'
+2023-10-27 13:37:03.069 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7169/graphql application/json 1439 - 200 - application/graphql-response+json;+charset=utf-8 157.1581ms
+2023-10-27 13:37:03.176 +05:30 [DBG] Connection id "0HMUMOE9R0REC" received FIN.
+2023-10-27 13:37:03.179 +05:30 [DBG] Connection id "0HMUMOE9R0REC" is closed. The last processed stream ID was 13.
+2023-10-27 13:37:03.179 +05:30 [DBG] The connection queue processing loop for 0HMUMOE9R0REC completed.
+2023-10-27 13:37:03.182 +05:30 [DBG] Connection id "0HMUMOE9R0REC" sending FIN because: "The client closed the connection."
+2023-10-27 13:37:03.190 +05:30 [DBG] Connection id "0HMUMOE9R0REC" stopped.
+2023-10-27 13:41:47.706 +05:30 [INF] Application is shutting down...
+2023-10-27 13:41:47.734 +05:30 [DBG] Hosting stopping
+2023-10-27 13:41:47.790 +05:30 [DBG] Hosting stopped
