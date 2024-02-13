@@ -1,3 +1,4 @@
+using GraphQL.Demo.Api.Users;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace GraphQL.Demo.Tests
@@ -9,7 +10,10 @@ namespace GraphQL.Demo.Tests
         {
             var schema = await new ServiceCollection()
                 .AddGraphQLServer()
-                .AddQueryType<Query>()
+                .AddQueryType<UserQueries>()
+                .AddMutationType()
+         .AddTypeExtension<UserMutations>()
+    .AddFiltering()
                 .BuildSchemaAsync();
             schema.ToString().MatchSnapshot();
         }

@@ -3,7 +3,7 @@ using GraphQL.Demo.Api.DataLoader;
 
 namespace GraphQL.Demo.Api.Users
 {
-    [ExtendObjectType(OperationTypeNames.Query)]
+    //[ExtendObjectType(OperationTypeNames.Query)]
     public class UserQueries
     {
         [UsePaging(MaxPageSize = 20, IncludeTotalCount = true)]
