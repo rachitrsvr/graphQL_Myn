@@ -2987,11 +2987,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projects\\graphql_api-demo\\GraphQL.Demo.Api\\GraphQL.Demo.Api.csproj",
+      "projectUniqueName": "C:\\Projects\\graphQL_Myn\\GraphQL.Demo.Api\\GraphQL.Demo.Api.csproj",
       "projectName": "GraphQL.Demo.Api",
-      "projectPath": "C:\\Projects\\graphql_api-demo\\GraphQL.Demo.Api\\GraphQL.Demo.Api.csproj",
+      "projectPath": "C:\\Projects\\graphQL_Myn\\GraphQL.Demo.Api\\GraphQL.Demo.Api.csproj",
       "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\graphql_api-demo\\GraphQL.Demo.Api\\obj\\",
+      "outputPath": "C:\\Projects\\graphQL_Myn\\GraphQL.Demo.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GraphQL.Demo.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f8af71294c6254360173a0180a23317a4f98577d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+603a9b4f47d7dabd95d40462152f1358e3fd504d")]
 [assembly: System.Reflection.AssemblyProductAttribute("GraphQL.Demo.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GraphQL.Demo.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
