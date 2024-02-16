@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/visualstudio,aspnetcore,csharp
-# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudio,aspnetcore,csharp
+# Created by https://www.toptal.com/developers/gitignore/api/aspnetcore,visualstudio,csharp
+# Edit at https://www.toptal.com/developers/gitignore?templates=aspnetcore,visualstudio,csharp
 
 ### ASPNETCore ###
 ## Ignore Visual Studio temporary files, build results, and
@@ -25,7 +25,6 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
-
 # Visual Studio 2015 cache/options directory
 .vs/
 # Uncomment if you have tasks that create the project's static files in wwwroot
@@ -704,4 +703,4 @@ FodyWeavers.xsd
 ### VisualStudio Patch ###
 # Additional files built by Visual Studio
 
-# End of https://www.toptal.com/developers/gitignore/api/visualstudio,aspnetcore,csharp
+# End of https://www.toptal.com/developers/gitignore/api/aspnetcore,visualstudio,csharp
