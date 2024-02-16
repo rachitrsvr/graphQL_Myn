@@ -1,5 +1,8 @@
 ﻿
+using GraphQL.Demo.Api.Data;
+using GraphQL.Demo.Api.DataLoader;
 using GraphQL.Demo.Api.Users;
+using Microsoft.EntityFrameworkCore;
 using Testcontainers.PostgreSql;
 namespace GraphQL.Demo.Tests
 {
@@ -12,11 +15,19 @@ namespace GraphQL.Demo.Tests
 
         public UserTests()
         {
+            var sqlConnectionString = "Host=localhost;Database=postgres;Username=postgres;Password=start;Port=5432";
             // Initialize the service collection and configure HotChocolate
             var services = new ServiceCollection();
-            services.AddGraphQL()
-                    .AddQueryType<UserQueries>()
-                    .AddMutationType<UserMutations>();
+            services
+                 .AddDbContext<AppDbContext>(options => options.UseNpgsql(sqlConnectionString), ServiceLifetime.Scoped)
+                .AddGraphQL()
+                  .AddQueryType()
+                .AddMutationType()
+                .AddTypeExtension<UserQueries>()
+                .AddTypeExtension<UserMutations>()
+                .AddDataLoader<UserByIdDataLoader>()
+                  .AddFiltering()
+                .AddSorting();
 
             // Build the service provider and resolve the IRequestExecutorResolver
             var serviceProvider = services.BuildServiceProvider();
@@ -39,15 +50,15 @@ namespace GraphQL.Demo.Tests
 
             // Create and execute the query
             var request = QueryRequestBuilder.New()
-                .SetQuery("{ getBooks { id title author } }")
+                .SetQuery("{ allUsers {nodes{id    firstName    lastName    email    address  }  } }")
                 .Create();
 
             // Act
             IExecutionResult result = await executor.ExecuteAsync(request);
 
             // Assert
-            //Assert.Null(result.Errors); // Ensure no errors occurred
-            //Assert.NotNull(result.Data); // Ensure data is returned
+            //Assert.Null(result); // Ensure no errors occurred
+            Assert.NotNull(result); // Ensure data is returned
             // You can perform additional assertions on the returned data if needed
         }
     }
