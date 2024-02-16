@@ -24,18 +24,27 @@ builder.Services.AddCors(options =>
     });
 });
 
-builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(sqlConnectionString));
+builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(sqlConnectionString),ServiceLifetime.Singleton);
 
+// Adding a GraphQL server to the dependency injection container.
 builder.Services.AddGraphQLServer()
-    .AddQueryFieldToMutationPayloads()
-    .AddGlobalObjectIdentification()
     .AddQueryType()
-        .AddTypeExtension<UserQueries>()
     .AddMutationType()
-         .AddTypeExtension<UserMutations>()
-    .AddFiltering()
-    .AddSorting()
-    .AddDataLoader<UserByIdDataLoader>();
+    .AddTypeExtension<UserQueries>()
+                .AddTypeExtension<UserMutations>()
+                .AddDataLoader<UserByIdDataLoader>()
+                  .AddFiltering()
+                .AddSorting();
+//builder.Services.AddGraphQLServer()
+//    .AddQueryFieldToMutationPayloads()
+//    .AddGlobalObjectIdentification()
+//    .AddQueryType()
+//        .AddTypeExtension<UserQueries>()
+//    .AddMutationType()
+//         .AddTypeExtension<UserMutations>()
+//    .AddFiltering()
+//    .AddSorting()
+//    .AddDataLoader<UserByIdDataLoader>();
 
 
 
@@ -44,8 +53,11 @@ app.UseRouting();
 
 // Use the CORS policy
 app.UseCors("AllowOrigin");
-app.MapGraphQL();
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapGraphQL();
+});
 
-app.MapGet("/", () => "Welcome to GraphQL Demo Api");
+app.MapGet("/", () => "GraphQL");
 
 app.Run();

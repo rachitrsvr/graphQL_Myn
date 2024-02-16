@@ -3,7 +3,7 @@ using GraphQL.Demo.Api.DataLoader;
 
 namespace GraphQL.Demo.Api.Users
 {
-    //[ExtendObjectType(OperationTypeNames.Query)]
+    [ExtendObjectType(OperationTypeNames.Query)]
     public class UserQueries
     {
         [UsePaging(MaxPageSize = 20, IncludeTotalCount = true)]
@@ -12,8 +12,16 @@ namespace GraphQL.Demo.Api.Users
         {
             return context.Users.OrderByDescending(t => t.Id);
         }
+        //public IQueryable<User> GetAllUsers(
+        //   [ScopedService] AppDbContext context)
+        //   => context.Users;
 
-        [NodeResolver]
+        //public Task<User> GetUserByIdAsync(
+        //  [ID(nameof(User))] int id,
+        //  UserByIdDataLoader attendeeById,
+        //  CancellationToken cancellationToken)
+        //  => attendeeById.LoadAsync(id, cancellationToken);
+        //[NodeResolver]
         public Task<User> GetUserByIdAsync(
             int id,
             UserByIdDataLoader dataLoader,

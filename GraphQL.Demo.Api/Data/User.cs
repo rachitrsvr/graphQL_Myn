@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace GraphQL.Demo.Api.Data
 {
-    [Node(NodeResolver = nameof(UserQueries.GetUserByIdAsync))]
+    //[Node(NodeResolver = nameof(UserQueries.GetUserByIdAsync))]
     public class User
     {
         [ID]

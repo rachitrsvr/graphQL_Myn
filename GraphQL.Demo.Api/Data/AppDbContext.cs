@@ -11,16 +11,27 @@ namespace GraphQL.Demo.Api.Data
         {
         }
 
-        public DbSet<User> Users { get; set; } = default!;
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-                => optionsBuilder.LogTo(message => Log.Information(message))
-                    .EnableSensitiveDataLogging()
-                    .EnableDetailedErrors();
+        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+        }
+
+
+        // Saves changes made to the database.
+        public override int SaveChanges()
+        {
+            try
+            {
+                ChangeTracker.DetectChanges();
+                return base.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
         }
     }
 }
