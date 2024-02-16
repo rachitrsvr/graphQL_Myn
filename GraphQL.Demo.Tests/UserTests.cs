@@ -50,7 +50,53 @@ namespace GraphQL.Demo.Tests
 
             // Create and execute the query
             var request = QueryRequestBuilder.New()
-                .SetQuery("{ allUsers {nodes{id    firstName    lastName    email    address  }  } }")
+                .SetQuery(@"query {
+                                  allUsers {
+                                    nodes{
+                                    id
+                                    firstName
+                                    lastName
+                                    email
+                                    address
+                                  }
+                                  }
+                                }")
+                .Create();
+
+            // Act
+            IExecutionResult result = await executor.ExecuteAsync(request);
+            
+            // Assert
+            //Assert.Null(result); // Ensure no errors occurred
+            Assert.NotNull(result); // Ensure data is returned
+            // You can perform additional assertions on the returned data if needed
+        }
+
+        [Fact]
+        public async Task TestAddUsersQuery()
+        {
+            // Resolve the IRequestExecutor
+            IRequestExecutor executor = await _resolver.GetRequestExecutorAsync();
+
+            // Create and execute the query
+            var request = QueryRequestBuilder.New()
+                .SetQuery(@"mutation {
+                          addUser(input: {
+                            firstName: ""Ram""
+                            lastName: ""Kapoor""
+                            email: ""ram@test.com""
+                            address: ""ram address"",
+                            phone1:""668788556""
+                          }) {
+                            user {
+                              id
+                              firstName
+                              lastName
+                              email
+                              address
+                            }
+                          }
+                        }")
                 .Create();
 
             // Act
