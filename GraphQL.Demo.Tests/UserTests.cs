@@ -107,5 +107,56 @@ namespace GraphQL.Demo.Tests
             Assert.NotNull(result); // Ensure data is returned
             // You can perform additional assertions on the returned data if needed
         }
+        [Fact]
+        public async Task TestUpdateUsersQuery()
+        {
+            // Resolve the IRequestExecutor
+            IRequestExecutor executor = await _resolver.GetRequestExecutorAsync();
+
+            // Create and execute the query
+            var request = QueryRequestBuilder.New()
+                .SetQuery(@"mutation {
+                  modifyUser( input: {id:2 firstName: ""Rac"", lastName: ""Sh"", email: ""rac@example.com"", address: ""racaddress"",phone1:""7878787788"" }) {
+                    user {
+                      id
+                      firstName
+                      lastName
+                      email
+                      address
+                      phone1
+                    }
+                  }
+                }")
+                .Create();
+
+            // Act
+            IExecutionResult result = await executor.ExecuteAsync(request);
+
+            // Assert
+            //Assert.Null(result); // Ensure no errors occurred
+            Assert.NotNull(result); // Ensure data is returned
+            // You can perform additional assertions on the returned data if needed
+        }
+        [Fact]
+        public async Task TestDeleteUserQuery()
+        {
+            // Resolve the IRequestExecutor
+            IRequestExecutor executor = await _resolver.GetRequestExecutorAsync();
+
+            // Create and execute the query
+            var request = QueryRequestBuilder.New()
+                .SetQuery(@"mutation {
+                      deleteUser(id: 1)
+                    }")
+                .Create();
+
+            // Act
+            IExecutionResult result = await executor.ExecuteAsync(request);
+
+            // Assert
+            //Assert.Null(result); // Ensure no errors occurred
+            Assert.NotNull(result); // Ensure data is returned
+            // You can perform additional assertions on the returned data if needed
+        }
     }
 }
