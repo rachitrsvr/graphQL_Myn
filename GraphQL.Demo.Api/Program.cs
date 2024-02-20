@@ -1,5 +1,7 @@
 using GraphQL.Demo.Api.Data;
+using GraphQL.Demo.Api.DataAccess;
 using GraphQL.Demo.Api.DataLoader;
+using GraphQL.Demo.Api.GraphQL;
 using GraphQL.Demo.Api.Users;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -24,17 +26,13 @@ builder.Services.AddCors(options =>
     });
 });
 
-builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(sqlConnectionString),ServiceLifetime.Singleton);
+builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(sqlConnectionString));
 
+
+builder.Services.AddScoped<IDataAccessProvider, DataAccessProvider>();
 // Adding a GraphQL server to the dependency injection container.
-builder.Services.AddGraphQLServer()
-    .AddQueryType()
-    .AddMutationType()
-    .AddTypeExtension<UserQueries>()
-                .AddTypeExtension<UserMutations>()
-                .AddDataLoader<UserByIdDataLoader>()
-                  .AddFiltering()
-                .AddSorting();
+builder.Services.AddGraphQLServer().AddQueryType<Query>()
+    .AddMutationType<UserMutations>();
 //builder.Services.AddGraphQLServer()
 //    .AddQueryFieldToMutationPayloads()
 //    .AddGlobalObjectIdentification()

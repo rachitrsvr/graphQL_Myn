@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace GraphQL.Demo.Api.Users
 {
-    [ExtendObjectType(OperationTypeNames.Mutation)]
+    //[ExtendObjectType(OperationTypeNames.Mutation)]
     public class UserMutations
     {
         public async Task<AddUserPayload> AddUserAsync(
